@@ -33,3 +33,10 @@ jobs:
       - run:
           name: build
           command: ng build --prod
+
+      - deploy:
+          name: Deploy
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              ./node_modules/.bin/firebase deploy --token=$FIREBASE_TOKEN
+            fi
