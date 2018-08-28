@@ -26,7 +26,7 @@ jobs:
           command: |
             ng test --code-coverage --watch=false
             yarn add codeclimate-test-reporter
-            .\node_modules\.bin\codeclimate-test-reporter.cmd < coverage\lcov.info
+            .\node_modules\.bin\codeclimate-test-reporter.cmd < .\coverage\lcov.info
       - run:
           name: e2e
           command: ng e2e
