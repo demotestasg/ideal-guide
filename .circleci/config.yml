@@ -23,16 +23,13 @@ jobs:
           command: sudo npm install -g @angular/cli@latest
       - run:
           name: test
-          command: ng test --code-coverage --watch=false
+          command: |
+            ng test --code-coverage --watch=false
+            yarn add codeclimate-test-reporter
+            .\node_modules\.bin\codeclimate-test-reporter.cmd < coverage\lcov.info
       - run:
           name: e2e
           command: ng e2e
       - run:
           name: build
           command: ng build --prod
-      - run:
-          name: install codeclimate
-          command: yarn add codeclimate-test-reporter
-      - run:
-          name: upload test coverage
-          command: .\node_modules\.bin\codeclimate-test-reporter.cmd < coverage\lcov.info
