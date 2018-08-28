@@ -23,7 +23,10 @@ jobs:
           command: sudo npm install -g @angular/cli@latest
       - run:
           name: test
-          command: ng test --code-coverage --watch=false
+          command: |
+            ng test --code-coverage --watch=false
+            sudo npm install -g codeclimate-test-reporter
+            codeclimate-test-reporter < ./coverage/lcov.info
       - run:
           name: e2e
           command: ng e2e
