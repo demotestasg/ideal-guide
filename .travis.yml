@@ -1,0 +1,27 @@
+sudo: required
+addons:
+  chrome: stable
+
+language: node_js
+node_js:
+  - "8"
+
+branches:
+  only:
+    - master
+
+before_script:
+  - npm install -g @angular/cli
+
+script:
+  - ng test --watch=false --code-coverage
+  - ng e2e
+  - ng build --prod
+
+#deploy:
+#  - provider: pages
+#    skip-cleanup: true
+#    github-token: $GITHUB_TOKEN
+#    keep-history: true
+#    on:
+#      branch: master
