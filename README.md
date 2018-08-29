@@ -1,5 +1,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/ed8c92ce08a818006ae5/maintainability)](https://codeclimate.com/github/demotestasg/ideal-guide/maintainability)
 
+[![CircleCI](https://circleci.com/gh/asgdemoci/reimagined-octo-winner.svg?style=svg)](https://circleci.com/gh/asgdemoci/reimagined-octo-winner)
+
 # IdealGuide
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
