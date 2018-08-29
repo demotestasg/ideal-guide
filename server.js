@@ -16,7 +16,7 @@ const forceSSL = function() {
 };
 
 const port = process.env.PORT || 8080;
-const appFolder = "/dist/silver-train";
+const appFolder = "/dist/ideal-guide";
 
 console.log(
   "Port: ",
